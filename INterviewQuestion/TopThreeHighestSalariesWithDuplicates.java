@@ -1,6 +1,5 @@
 package INterviewQuestion;
 import java.util.*;
-
 public class TopThreeHighestSalariesWithDuplicates {
 
     static class Employee {

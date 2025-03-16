@@ -32,8 +32,8 @@ public class CharyPick {
 
     public static void main(String[] args) {
         int matrix[][] = {{2, 3, 1, 2},
-                {3, 4, 2, 2},
-                {5, 6, 3, 5}};
+                          {3, 4, 2, 2},
+                          {5, 6, 3, 5}};
         int n = matrix.length;
         int m = matrix[0].length;
 

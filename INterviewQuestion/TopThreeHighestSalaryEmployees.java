@@ -2,17 +2,19 @@ package INterviewQuestion;
 
 import java.util.*;
 
-class Employee {
-    String name;
-    double salary;
 
-    public Employee(String name, double salary) {
-        this.name = name;
-        this.salary = salary;
-    }
-}
 
 public class TopThreeHighestSalaryEmployees {
+
+    static class Employee {
+        String name;
+        double salary;
+
+        public Employee(String name, double salary) {
+            this.name = name;
+            this.salary = salary;
+        }
+    }
     public static List<Employee> getTopThreeEmployees(List<Employee> employees) {
         // TreeMap to store salaries in descending order (salary -> list of employees)
         TreeMap<Double, List<Employee>> salaryMap = new TreeMap<>(Collections.reverseOrder());
