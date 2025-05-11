@@ -1,8 +1,5 @@
 package INterviewQuestion;
-
 import java.util.*;
-
-
 
 public class TopThreeHighestSalaryEmployees {
 

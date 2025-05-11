@@ -25,11 +25,7 @@ public class DuplicateEmployee {
 
        Map<Integer, Long> duplicateIdCount = employee.
                stream().
-               collect(Collectors.
-                       groupingBy(
-                               emp -> emp.id,
-                               Collectors.
-                               counting()));
+               collect(Collectors.groupingBy(emp -> emp.id, Collectors.counting()));
        duplicateIdCount.
                entrySet().
                stream().

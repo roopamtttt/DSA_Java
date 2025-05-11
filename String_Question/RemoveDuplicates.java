@@ -7,8 +7,6 @@ public class RemoveDuplicates {
     public static String removeDuplicate(String str){
         HashSet<Character> set = new HashSet<>();
         StringBuilder result = new StringBuilder();
-
-
         for (char ch : str.toCharArray()) {
             if (!set.contains(ch)) {
                 set.add(ch);

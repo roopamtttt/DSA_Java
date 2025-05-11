@@ -11,10 +11,10 @@ public class RobMaxNonAdjecentHouse {
     }
 
     public static void main(String[] args) {
-        int[] ValuesInHouse = {2,1, 4, 9};
+        int[] ValuesInHouse = {2,4,3};
         int n = ValuesInHouse.length;
         if (n == 1) {
-            System.out.println(ValuesInHouse[0]); // If only one house, return its value
+            System.out.println(ValuesInHouse[0]);// If only one house, return its value
             return;
         }
         int[] arr1 = new int[n - 1];  // Exclude first house
@@ -22,9 +22,17 @@ public class RobMaxNonAdjecentHouse {
         for (int j = 1; j < n; j++) {
             arr1[j - 1] = ValuesInHouse[j]; // Store from index 0
         }
+        for(int p : arr1){
+            System.out.print(p+" ");
+        }
         for (int j = 0; j < n - 1; j++) {
             arr2[j] = ValuesInHouse[j]; // Store from index 0
         }
+        System.out.println();
+        for(int p : arr2){
+            System.out.print(p+" ");
+        }
+        System.out.println();
         int[] dp1 = new int[n - 1];
         int[] dp2 = new int[n - 1];
         Arrays.fill(dp1, -1);

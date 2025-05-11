@@ -1,15 +1,9 @@
 package String_Question;
-
-import DP.CharyPick;
-
-import java.awt.*;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class LongUniqCharSubString {
-
     public static int lengthOfLongestSubstring(String s) {
         HashSet<Character> set = new HashSet<>();
         int left = 0, maxLength = 0;
@@ -24,7 +18,6 @@ public class LongUniqCharSubString {
         }
         return maxLength;
     }
-
 
     public static String LSNRC(String str){
 
@@ -53,7 +46,7 @@ public class LongUniqCharSubString {
             char ch = str.charAt(i);
             while(seen[ch]){
                 seen[str.charAt(left)] = false;
-                left--;
+                left++;
             }
             seen[ch] = true;
             if(i-left+1 > maxLen){
@@ -65,19 +58,6 @@ public class LongUniqCharSubString {
     }
     public static void main(String[] args) {
         String input = "abcabcbb";
-        System.out.println("Length of longest substring: " + lengthOfLongestSubstring(input));
+        System.out.println("Length of longest substring: " + maxSubstringNR(input));
     }
 }
-
-/*
-
-Ager mujhe  longest subString nikalna hai
-
-abcabcbc
-
-rit
-lft
-
-
-
- */

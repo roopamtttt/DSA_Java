@@ -1,7 +1,5 @@
 package DP;
-
 import java.util.Arrays;
-
 public class NinjaTraining {
 
     public static int findMaximumPoint(int day,int last, int [][] Point, int [][] dp){
@@ -16,11 +14,10 @@ public class NinjaTraining {
             }
             return dp[day][last] = maxi;
         }
-
         int maxi = 0;
         for(int i = 0; i <= 2; i++){
             if(i != last){
-                int Activity  = maxi + findMaximumPoint(day -1 , i ,Point, dp);
+                int Activity  = Point[day][i] + findMaximumPoint(day -1 , i ,Point, dp);
                 maxi = Math.max(maxi,Activity);
             }
         }
